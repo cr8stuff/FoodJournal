@@ -13,6 +13,7 @@
 		7D1BB7C21A937CA80011132F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1BB7C11A937CA80011132F /* Images.xcassets */; };
 		7D1BB7C51A937CA80011132F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1BB7C31A937CA80011132F /* LaunchScreen.xib */; };
 		7D1BB7D11A937CA80011132F /* FoodJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB7D01A937CA80011132F /* FoodJournalTests.swift */; };
+		7D1BB7DB1A937DB40011132F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB7DA1A937DB40011132F /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7D1BB7CA1A937CA80011132F /* FoodJournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodJournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1BB7CF1A937CA80011132F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D1BB7D01A937CA80011132F /* FoodJournalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalTests.swift; sourceTree = "<group>"; };
+		7D1BB7DA1A937DB40011132F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				7D1BB7BA1A937CA80011132F /* AppDelegate.swift */,
 				7D1BB7BC1A937CA80011132F /* ViewController.swift */,
 				7D1BB7BE1A937CA80011132F /* Main.storyboard */,
+				7D1BB7DA1A937DB40011132F /* DetailViewController.swift */,
 				7D1BB7C11A937CA80011132F /* Images.xcassets */,
 				7D1BB7C31A937CA80011132F /* LaunchScreen.xib */,
 				7D1BB7B81A937CA80011132F /* Supporting Files */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1BB7DB1A937DB40011132F /* DetailViewController.swift in Sources */,
 				7D1BB7BD1A937CA80011132F /* ViewController.swift in Sources */,
 				7D1BB7BB1A937CA80011132F /* AppDelegate.swift in Sources */,
 			);

@@ -10,22 +10,26 @@
 	<string>FoodJournal</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>4BB5F9E6F9278186CF17E35C9BCFC4E7DEABD5D3</key>
+		<string>https://github.com/cr8stuff/FoodJournal.git</string>
 		<key>6C84F22F2B57DEF3C09F360E5C0CEDD5C2EF91D9</key>
 		<string>https://github.com/cr8stuff/ExchangeAGram.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FoodJournal/FoodJournal/FoodJournal.xcodeproj</string>
+	<string>FoodJournal.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>4BB5F9E6F9278186CF17E35C9BCFC4E7DEABD5D3</key>
+		<string>../..</string>
 		<key>6C84F22F2B57DEF3C09F360E5C0CEDD5C2EF91D9</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/cr8stuff/ExchangeAGram.git</string>
+	<string>https://github.com/cr8stuff/FoodJournal.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6C84F22F2B57DEF3C09F360E5C0CEDD5C2EF91D9</string>
+	<string>4BB5F9E6F9278186CF17E35C9BCFC4E7DEABD5D3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>6C84F22F2B57DEF3C09F360E5C0CEDD5C2EF91D9</string>
 			<key>IDESourceControlWCCName</key>
-			<string>DavidApps</string>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4BB5F9E6F9278186CF17E35C9BCFC4E7DEABD5D3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FoodJournal</string>
 		</dict>
 	</array>
 </dict>

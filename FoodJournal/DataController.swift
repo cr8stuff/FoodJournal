@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
+let kUSDAItemCompleted = "USDAItemInstanceCompleted"
 
 class DataController {
     
@@ -70,7 +71,6 @@ class DataController {
                         return
                     }
                     else {
-                        println("Lets save this to coredata!")
                         
                         let entityDescription = NSEntityDescription.entityForName("USDAItem", inManagedObjectContext: managedObjectContext)
                         let usdaItem = USDAItem(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
@@ -160,6 +160,8 @@ class DataController {
                                 }
                                 
                                 (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
+                                
+                                NSNotificationCenter.defaultCenter().postNotificationName(kUSDAItemCompleted, object: usdaItem)
                             }
                         }
                     }

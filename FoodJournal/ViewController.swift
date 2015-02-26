@@ -48,6 +48,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.definesPresentationContext = true
         
         self.suggestedSearchFoods = ["apple", "bagel", "banana", "beer", "bread", "carrots", "cheddar cheese", "chicen breast", "chili with beans", "chocolate chip cookie", "coffee", "cola", "corn", "egg", "graham cracker", "granola bar", "green beans", "ground beef patty", "hot dog", "ice cream", "jelly doughnut", "ketchup", "milk", "mixed nuts", "mustard", "oatmeal", "orange juice", "peanut butter", "pizza", "pork chop", "potato", "potato chips", "pretzels", "raisins", "ranch salad dressing", "red wine", "rice", "salsa", "shrimp", "spaghetti", "spaghetti sauce", "tuna", "white wine", "yellow cake"]
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "usdaItemDidComplete:", name: kUSDAItemCompleted, object: nil)
+    }
+    
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toDetailVCSegua" {
+            if sender != nil {
+                var detailVC = segue.destinationViewController as DetailViewController
+                detailVC.usdaItem = sender as? USDAItem
+            } else {
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -143,6 +161,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             makeRequest(searchFoodName)
             
         }else if selectedScopeButtonIndex == 1 {
+            self.performSegueWithIdentifier("toDetailVCSegue", sender: nil)
             let idValue = apiSearchForFoods[indexPath.row].idValue
             dataController.saveUSDAItemForId(idValue, json: self.jsonResponse)
             
@@ -271,6 +290,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let appDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         let managedObjectContext = appDelegate.managedObjectContext
         self.favoritedUSDAItems = managedObjectContext?.executeFetchRequest(fetchRequest, error: nil) as [USDAItem]
+    }
+    
+    //Mark - NSNotificationCenter
+    func usdaItemDidComplete(notification: NSNotification) {
+        let selectedScopeButtonIndex = self.searchController.searchBar.selectedScopeButtonIndex
+        
+        if selectedScopeButtonIndex == 2 {
+            self.tableView.reloadData()
+        }
     }
 }
 
